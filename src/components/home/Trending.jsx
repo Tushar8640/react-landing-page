@@ -128,7 +128,7 @@ const Trending = () => {
             <TrendingProductCard />
             <button className="bg-black w-full  rounded text-white py-3 mt-5">View All</button>
           </div>
-          <div>
+          <div className="px-4">
          
             <TrendingProductCard />
             <TrendingProductCard />
@@ -136,7 +136,7 @@ const Trending = () => {
             <button className="bg-black w-full  rounded text-white py-3 mt-5">View All</button>
         
           </div>
-          <div>
+          <div className="px-4">
            
             <TrendingProductCard />
             <TrendingProductCard />
