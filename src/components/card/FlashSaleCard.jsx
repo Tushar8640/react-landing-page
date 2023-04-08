@@ -11,21 +11,80 @@ const FlashSaleCard = ({ product }) => {
     discountPrice,
     new: sale,
   } = product || {};
-  console.log(over);
+
   return (
     <>
       <div
         className={`max-w-[280] h-[450px] ${
           !over && "ring-[1px]"
-        } ring-[#F2F2F2] bg-white text-gray-900  `}
+        } ring-[#F2F2F2] bg-white text-gray-900  relative`}
         onMouseOver={() => setOver(true)}
         onMouseOut={() => setOver(false)}
       >
         <div className={`p-[10px] ${over && "ring-[1px]"} ring-[#F2F2F2]`}>
+          <span
+            className={` ${
+              sale
+                ? "text-[#17201D] bg-[#E8E9E8]"
+                : "text-[#DB2F06] bg-[#FAE8E4]"
+            }  flex justify-center items-center h-6 px-2 rounded text-[12px]  absolute top-3 left-3 z-10`}
+          >
+            {sale ? "New" : "Sale"}
+          </span>
+
+          {/* slider button on hover  */}
+          {over && (
+            <button className="bg-black rounded-full text-white p-2 absolute top-[85px] left-2 z-10">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 26 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="w-3 h-3"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"
+                />
+              </svg>
+            </button>
+          )}
+          {over && (
+            <button className="bg-black rounded-full text-white p-2 absolute top-[85px] right-2 z-10">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="w-3 h-3"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                />
+              </svg>
+            </button>
+          )}
+          {/* slider dot button  */}
+          {over && (
+            <div className="absolute top-40 z-10 flex justify-center items-center gap-x-1 right-[110px]">
+              <div className="w-[6px] h-[6px] bg-black rounded-full"></div>
+
+              <div className="w-[6px] h-[6px] bg-gray-300 rounded-full"></div>
+
+              <div className="w-[6px] h-[6px] bg-gray-300 rounded-full"></div>
+            </div>
+          )}
           <img
             src={image}
             alt=""
-            className="object-contain object-center w-full rounded-md h-[131px] bg-white my-2 transform group-hover:-scale-x-100"
+            className={`object-contain object-center w-full rounded-md h-[131px] bg-white my-2 ${
+              over && "transform -scale-x-100"
+            }`}
           />
           <div className="mt-6 mb-1 flex flex-col justify-between ">
             <span className="block text-[12px]  text-[#8B928F] mb-2">
@@ -198,9 +257,65 @@ const FlashSaleCard = ({ product }) => {
             </button>
           </div>
         </div>
-        <div className={`p-[10px] ${over && "ring-[1px] h-[85px]"} ring-[#F2F2F2]`}>
-          <button className="w-full bg-[#96AEA1]/10 mt-2 py-3 text-[#5B9982] font-medium text-[15px]">
-            Add To Cart
+        <div
+          className={`p-[10px] ${over && "ring-[1px] h-[85px]"} ring-[#F2F2F2]`}
+        >
+          <button className="w-full bg-[#96AEA1]/10 mt-2 py-3 text-[#5B9982] font-medium text-[15px] flex justify-center items-center gap-x-2 rounded hover:bg-[#5B9982] hover:text-white">
+            Add To Cart{" "}
+            <span>
+              <svg
+              className="hover:text-white"
+                width="20px"
+                height="20px"
+                viewBox="-4.56 -4.56 33.12 33.12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="currentColor"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  {" "}
+                  <path
+                    opacity="1"
+                    d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>{" "}
+                  <path
+                    d="M9.0008 22H15.0008C19.0208 22 19.7408 20.39 19.9508 18.43L20.7008 12.43C20.9708 9.99 20.2708 8 16.0008 8H8.0008C3.7308 8 3.0308 9.99 3.3008 12.43L4.0508 18.43C4.2608 20.39 4.9808 22 9.0008 22Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>{" "}
+                  <path
+                    opacity="1"
+                    d="M15.4945 12H15.5035"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>{" "}
+                  <path
+                    opacity="1"
+                    d="M8.49451 12H8.50349"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>{" "}
+                </g>
+              </svg>
+            </span>
           </button>
         </div>
       </div>
