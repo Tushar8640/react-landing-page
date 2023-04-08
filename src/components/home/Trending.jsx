@@ -97,7 +97,7 @@ const Trending = () => {
     },
   ];
   return (
-    <section className="bg-gray-50 py-20">
+    <section className="bg-gray-50 py-20 container mx-auto">
       <div>
         <BoxTitle bold={"Trending"} normal={"Product"} />
         <div className="grid grid-cols-3  justify-center">

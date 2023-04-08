@@ -14,7 +14,11 @@ const FlashSale = () => {
       price: 3000.0,
       discountPrice: 2036.0,
       new: false,
-      image: "/src/assets/bluesofa.png",
+      images: [
+        "/src/assets/bluesofa.png",
+        "/src/assets/protin.png",
+        "/src/assets/earbud.png",
+      ],
     },
     {
       id: 2,
@@ -25,7 +29,11 @@ const FlashSale = () => {
       price: 40.0,
       discountPrice: 36.0,
       new: true,
-      image: "/src/assets/protin.png",
+      images: [
+        "/src/assets/protin.png",
+        "/src/assets/bluesofa.png",
+        "/src/assets/earbud.png",
+      ],
     },
     {
       id: 3,
@@ -35,7 +43,11 @@ const FlashSale = () => {
       price: 150.0,
       discountPrice: 124.0,
       new: false,
-      image: "/src/assets/earbud.png",
+      images: [
+        "/src/assets/earbud.png",
+        "/src/assets/protin.png",
+        "/src/assets/bluesofa.png",
+      ],
     },
     {
       id: 4,
@@ -45,7 +57,11 @@ const FlashSale = () => {
       price: 3000.0,
       discountPrice: 2036.0,
       new: false,
-      image: "/src/assets/foxsofa.png",
+      images: [
+        "/src/assets/foxsofa.png",
+        "/src/assets/protin.png",
+        "/src/assets/bluesofa.png",
+      ],
     },
     {
       id: 5,
@@ -56,7 +72,11 @@ const FlashSale = () => {
       price: 36.0,
       discountPrice: 40.0,
       new: false,
-      image: "/src/assets/router.png",
+      images: [
+        "/src/assets/router.png",
+        "/src/assets/protin.png",
+        "/src/assets/bluesofa.png",
+      ],
     },
   ];
   return (

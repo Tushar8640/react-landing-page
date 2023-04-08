@@ -2,16 +2,32 @@ import React, { useState } from "react";
 
 const FlashSaleCard = ({ product }) => {
   const [over, setOver] = useState(false);
+  const [index, setIndex] = useState(0);
   const {
     title,
     category,
     rating,
-    image,
+    images,
     price,
     discountPrice,
     new: sale,
   } = product || {};
 
+  const handleSliderRightClick = () => {
+    console.log("right clik");
+    if (index >= images.length - 1) {
+      return setIndex(0);
+    }
+    setIndex(index + 1);
+  };
+  const handleSliderLeftClick = () => {
+    console.log("left clik");
+    if (index <= 0) {
+      return setIndex(2);
+    }
+    setIndex(index - 1);
+  };
+  
   return (
     <>
       <div
@@ -34,7 +50,10 @@ const FlashSaleCard = ({ product }) => {
 
           {/* slider button on hover  */}
           {over && (
-            <button className="bg-black rounded-full text-white p-2 absolute top-[85px] left-2 z-10">
+            <button
+              onClick={handleSliderLeftClick}
+              className="bg-black rounded-full text-white p-2 absolute top-[85px] left-2 z-10"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -52,7 +71,10 @@ const FlashSaleCard = ({ product }) => {
             </button>
           )}
           {over && (
-            <button className="bg-black rounded-full text-white p-2 absolute top-[85px] right-2 z-10">
+            <button
+              onClick={handleSliderRightClick}
+              className="bg-black rounded-full text-white p-2 absolute top-[85px] right-2 z-10"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -72,15 +94,30 @@ const FlashSaleCard = ({ product }) => {
           {/* slider dot button  */}
           {over && (
             <div className="absolute top-40 z-10 flex justify-center items-center gap-x-1 right-[110px]">
-              <div className="w-[6px] h-[6px] bg-black rounded-full"></div>
+              <button
+                onClick={() => setIndex(0)}
+                className={`w-[6px] h-[6px] ${
+                  index == 0 ? "bg-black" : "bg-gray-300"
+                } rounded-full`}
+              ></button>
 
-              <div className="w-[6px] h-[6px] bg-gray-300 rounded-full"></div>
+              <button
+                onClick={() => setIndex(1)}
+                className={`w-[6px] h-[6px] ${
+                  index == 1 ? "bg-black" : "bg-gray-300"
+                } rounded-full`}
+              ></button>
 
-              <div className="w-[6px] h-[6px] bg-gray-300 rounded-full"></div>
+              <button
+                onClick={() => setIndex(2)}
+                className={`w-[6px] h-[6px] ${
+                  index == 2 ? "bg-black" : "bg-gray-300"
+                } rounded-full`}
+              ></button>
             </div>
           )}
           <img
-            src={image}
+            src={images[index]}
             alt=""
             className={`object-contain object-center w-full rounded-md h-[131px] bg-white my-2 ${
               over && "transform -scale-x-100"
@@ -264,7 +301,7 @@ const FlashSaleCard = ({ product }) => {
             Add To Cart{" "}
             <span>
               <svg
-              className="hover:text-white"
+                className="hover:text-white"
                 width="20px"
                 height="20px"
                 viewBox="-4.56 -4.56 33.12 33.12"

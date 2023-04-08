@@ -10,7 +10,7 @@ const TrendingProductCard = ({ product }) => {
     discountPrice,
     new: sale,
   } = product || {};
-  console.log(image);
+  
   return (
     <div className="grid grid-cols-6 bg-white gap-x-10 mt-4 ring-1 ring-[#F2F2F2] px-6 py-4 relative">
       <div className="col-span-2 flex justify-center ">
