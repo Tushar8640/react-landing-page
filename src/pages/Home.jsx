@@ -4,10 +4,10 @@ import Trending from "../components/home/Trending";
 
 const Home = () => {
   return (
-    <>
+    <div className="">
       <FlashSale />
       <Trending />
-    </>
+    </div>
   );
 };
 

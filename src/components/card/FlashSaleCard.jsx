@@ -31,13 +31,13 @@ const FlashSaleCard = ({ product }) => {
   return (
     <>
       <div
-        className={`max-w-[280] h-[450px] ${
-          !over && "ring-[1px]"
+        className={`md:max-w-[280] h-[450px] ${
+          !over && "ring-[1px] "
         } ring-[#F2F2F2] bg-white text-gray-900  relative`}
         onMouseOver={() => setOver(true)}
         onMouseOut={() => setOver(false)}
       >
-        <div className={`p-[10px] ${over && "ring-[1px]"} ring-[#F2F2F2]`}>
+        <div className={`p-3 md:p-[10px] ${over && "ring-[1px]"} ring-[#F2F2F2]`}>
           <span
             className={` ${
               sale

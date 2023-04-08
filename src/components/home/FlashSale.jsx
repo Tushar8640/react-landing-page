@@ -81,7 +81,7 @@ const FlashSale = () => {
   ];
   return (
     <>
-      <section className="container  mx-auto my-16 p-3">
+      <section className="container  mx-auto md:my-16 p-3">
         <div className="grid grid-cols-12 justify-center gap-x-4">
           <div className="col-span-12 md:col-span-10 lg:col-span-10">
             <div>
@@ -93,7 +93,7 @@ const FlashSale = () => {
                   <BoxTitle bold={"Flash"} normal={"Sale Product"} />
                   <Timmer />
                 </div>
-                <div className="flex gap-x-2 hidden md:visible">
+                <div className="md:flex gap-x-2 hidden md:visible">
                   {" "}
                   <button>
                     <svg
@@ -129,7 +129,7 @@ const FlashSale = () => {
                   </button>
                 </div>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-[20px] my-4">
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-[20px] my-4">
                 {products?.map((product) => (
                   <FlashSaleCard key={product?.id} product={product} />
                 ))}
