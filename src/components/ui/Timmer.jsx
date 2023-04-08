@@ -2,7 +2,7 @@ import React from "react";
 
 const Timmer = () => {
   return (
-    <div className="flex items-center gap-x-3 ml-5 text-[#554FA6] text-[14px] font-bold">
+    <div className="flex items-center gap-x-3 md:ml-5 my-2 text-[#554FA6] text-[14px] font-bold">
       <div className="flex justify-center items-center bg-[#D3D1F3] px-3 h-10 rounded ">
         <span>2d</span>
       </div>

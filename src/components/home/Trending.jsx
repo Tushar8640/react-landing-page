@@ -97,10 +97,10 @@ const Trending = () => {
     },
   ];
   return (
-    <section className="bg-gray-50 py-20 container mx-auto">
+    <section className="bg-gray-50 py-20 container mx-auto p-3">
       <div>
         <BoxTitle bold={"Trending"} normal={"Product"} />
-        <div className="grid grid-cols-3  justify-center">
+        <div className="grid hidden md:visible  md:grid-cols-3  justify-center">
           <div className="flex justify-between items-center">
             <Title bold={"Fashion"} normal={"For Woman"} />
             <div className="flex justify-center items-center mx-3 gap-x-3">
@@ -213,8 +213,11 @@ const Trending = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-3 divide-x-2 divide-[#F2F2F2]  justify-center ">
+        <div className="grid  grid-cols-1 md:grid-cols-3 divide-x-2 divide-[#F2F2F2]  justify-center ">
           <div className="px-4">
+            <div className="md:hidden">
+              <Title bold={"Cosmetics"} normal={"For Winter"} />
+            </div>
             {products?.slice(0, 3)?.map((product) => (
               <TrendingProductCard product={product} />
             ))}
@@ -223,6 +226,9 @@ const Trending = () => {
             </button>
           </div>
           <div className="px-4">
+            <div className="md:hidden">
+              <Title bold={"Fashion"} normal={"For Woman"} />
+            </div>
             {products?.slice(3, 6)?.map((product) => (
               <TrendingProductCard product={product} />
             ))}
@@ -231,6 +237,9 @@ const Trending = () => {
             </button>
           </div>
           <div className="px-4">
+            <div className="md:hidden">
+              <Title bold={"Food"} normal={"For Helth"} />
+            </div>
             {products?.slice(6, 9)?.map((product) => (
               <TrendingProductCard product={product} />
             ))}

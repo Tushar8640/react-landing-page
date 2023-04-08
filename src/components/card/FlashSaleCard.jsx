@@ -123,11 +123,11 @@ const FlashSaleCard = ({ product }) => {
               over && "transform -scale-x-100"
             }`}
           />
-          <div className="mt-6 mb-1 flex flex-col justify-between ">
+          <div className="md:mt-6 mb-1 flex flex-col justify-between ">
             <span className="block text-[12px]  text-[#8B928F] mb-2">
               {category}
             </span>
-            <h2 className="text-[16px] text-[#17201D] font-normal  tracking-wide">
+            <h2 className=" text-[14px] md:text-[16px]  text-[#17201D] font-normal  tracking-wide">
               {title}
             </h2>
           </div>

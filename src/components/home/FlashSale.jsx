@@ -81,22 +81,82 @@ const FlashSale = () => {
   ];
   return (
     <>
-      <section className="container  mx-auto my-16">
+      <section className="container  mx-auto my-16 p-3">
         <div className="grid grid-cols-12 justify-center gap-x-4">
-          <div className="col-span-10">
+          <div className="col-span-12 md:col-span-10 lg:col-span-10">
             <div>
-              <div className="flex items-center">
-                <BoxTitle bold={"Flash"} normal={"Sale Product"} />
-                <Timmer />
+              <div
+                className="flex flex-col
+               md:flex-row md:items-center justify-between"
+              >
+                <div className="flex flex-col md:flex-row  md:items-center">
+                  <BoxTitle bold={"Flash"} normal={"Sale Product"} />
+                  <Timmer />
+                </div>
+                <div className="flex gap-x-2 hidden md:visible">
+                  {" "}
+                  <button>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 26 24"
+                      strokeWidth={2}
+                      stroke="currentColor"
+                      className="w-4 h-4"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"
+                      />
+                    </svg>
+                  </button>
+                  <button className="bg-black rounded-full text-white p-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="currentColor"
+                      className="w-4 h-4"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                      />
+                    </svg>
+                  </button>
+                </div>
               </div>
-              <div className="grid grid-cols-5 gap-[20px]">
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-[20px] my-4">
                 {products?.map((product) => (
                   <FlashSaleCard key={product?.id} product={product} />
                 ))}
               </div>
             </div>
           </div>
-          <div className="col-span-2  mt-14 ">
+          <div className="col-span-12 md:col-span-2   relative p-4">
+            <button className="absolute top-[350px] md:top-72 left-[150px] text-yellow-400 flex items-center justify-center gap-x-2">
+              Shop Now{" "}
+              <span>
+                {" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke="currentColor"
+                  className="w-3 h-3"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                  />
+                </svg>
+              </span>
+            </button>
             <img src={bigsale} className="w-full h-full" alt="" />
           </div>
         </div>
