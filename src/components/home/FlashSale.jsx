@@ -2,7 +2,7 @@ import React from "react";
 import BoxTitle from "../ui/BoxTitle";
 import Timmer from "../ui/Timmer";
 import FlashSaleCard from "../card/FlashSaleCard";
-import bigsale from "../../assets/bigsale.png";
+import bigsale from "/images/bigsale.png";
 
 const FlashSale = () => {
   const products = [
@@ -15,9 +15,9 @@ const FlashSale = () => {
       discountPrice: 2036.0,
       new: false,
       images: [
-        "../../assets/bluesofa.png",
-        "../../assets/protin.png",
-        "../../assets/earbud.png",
+        "/images/bluesofa.png",
+        "/images/protin.png",
+        "/images/earbud.png",
       ],
     },
     {
@@ -30,9 +30,9 @@ const FlashSale = () => {
       discountPrice: 36.0,
       new: true,
       images: [
-        "../../assets/protin.png",
-        "../../assets/bluesofa.png",
-        "../../assets/earbud.png",
+        "/images/protin.png",
+        "/images/bluesofa.png",
+        "/images/earbud.png",
       ],
     },
     {
@@ -44,9 +44,9 @@ const FlashSale = () => {
       discountPrice: 124.0,
       new: false,
       images: [
-        "../../assets/earbud.png",
-        "../../assets/protin.png",
-        "../../assets/bluesofa.png",
+        "/images/earbud.png",
+        "/images/protin.png",
+        "/images/bluesofa.png",
       ],
     },
     {
@@ -58,9 +58,9 @@ const FlashSale = () => {
       discountPrice: 2036.0,
       new: false,
       images: [
-        "../../assets/foxsofa.png",
-        "../../assets/protin.png",
-        "../../assets/bluesofa.png",
+        "/images/foxsofa.png",
+        "/images/protin.png",
+        "/images/bluesofa.png",
       ],
     },
     {
@@ -73,9 +73,9 @@ const FlashSale = () => {
       discountPrice: 40.0,
       new: false,
       images: [
-        "../../assets/router.png",
-        "../../assets/protin.png",
-        "../../assets/bluesofa.png",
+        "/images/router.png",
+        "/images/protin.png",
+        "/images/bluesofa.png",
       ],
     },
   ];
@@ -137,7 +137,7 @@ const FlashSale = () => {
             </div>
           </div>
           <div className="col-span-12 md:col-span-2   relative p-4">
-            <button className="absolute top-[350px] md:top-72 left-[150px] text-yellow-400 flex items-center justify-center gap-x-2">
+            <button className="absolute top-[350px] md:top-72 left-[150px] md:left-[80px] text-yellow-400 flex items-center justify-center gap-x-2">
               Shop Now{" "}
               <span>
                 {" "}

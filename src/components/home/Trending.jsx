@@ -13,7 +13,7 @@ const Trending = () => {
       price: 3000.0,
       discountPrice: 2036.0,
       new: false,
-      image: "../../assets/trend1.png",
+      image: "/images/trend1.png",
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ const Trending = () => {
       price: 40.0,
       discountPrice: 36.0,
       new: true,
-      image: "../../assets/trend2.png",
+      image: "/images/trend2.png",
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ const Trending = () => {
       price: 150.0,
       discountPrice: 124.0,
       new: false,
-      image: "../../assets/trend3.png",
+      image: "/images/trend3.png",
     },
     {
       id: 4,
@@ -43,7 +43,7 @@ const Trending = () => {
       price: 3000.0,
       discountPrice: 2036.0,
       new: false,
-      image: "../../assets/trend4.png",
+      image: "/images/trend4.png",
     },
     {
       id: 5,
@@ -53,7 +53,7 @@ const Trending = () => {
       price: 36.0,
       discountPrice: 40.0,
       new: false,
-      image: "../../assets/trend5.png",
+      image: "/images/trend5.png",
     },
     {
       id: 6,
@@ -63,7 +63,7 @@ const Trending = () => {
       price: 36.0,
       discountPrice: 40.0,
       new: false,
-      image: "../../assets/src/assets/trend6.png",
+      image: "/images/src/assets/trend6.png",
     },
     {
       id: 7,
@@ -73,7 +73,7 @@ const Trending = () => {
       price: 36.0,
       discountPrice: 40.0,
       new: false,
-      image: "../../assets/trend7.png",
+      image: "/images/trend7.png",
     },
     {
       id: 8,
@@ -83,7 +83,7 @@ const Trending = () => {
       price: 36.0,
       discountPrice: 40.0,
       new: false,
-      image: "../../assets/trend8.png",
+      image: "/images/trend8.png",
     },
     {
       id: 9,
@@ -93,7 +93,7 @@ const Trending = () => {
       price: 36.0,
       discountPrice: 40.0,
       new: false,
-      image: "../../assets/trend9.png",
+      image: "/images/trend9.png",
     },
   ];
   return (
