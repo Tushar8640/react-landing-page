@@ -15,9 +15,9 @@ const FlashSale = () => {
       discountPrice: 2036.0,
       new: false,
       images: [
-        "/src/assets/bluesofa.png",
-        "/src/assets/protin.png",
-        "/src/assets/earbud.png",
+        "../../assets/bluesofa.png",
+        "../../assets/protin.png",
+        "../../assets/earbud.png",
       ],
     },
     {
@@ -30,9 +30,9 @@ const FlashSale = () => {
       discountPrice: 36.0,
       new: true,
       images: [
-        "/src/assets/protin.png",
-        "/src/assets/bluesofa.png",
-        "/src/assets/earbud.png",
+        "../../assets/protin.png",
+        "../../assets/bluesofa.png",
+        "../../assets/earbud.png",
       ],
     },
     {
@@ -44,9 +44,9 @@ const FlashSale = () => {
       discountPrice: 124.0,
       new: false,
       images: [
-        "/src/assets/earbud.png",
-        "/src/assets/protin.png",
-        "/src/assets/bluesofa.png",
+        "../../assets/earbud.png",
+        "../../assets/protin.png",
+        "../../assets/bluesofa.png",
       ],
     },
     {
@@ -58,9 +58,9 @@ const FlashSale = () => {
       discountPrice: 2036.0,
       new: false,
       images: [
-        "/src/assets/foxsofa.png",
-        "/src/assets/protin.png",
-        "/src/assets/bluesofa.png",
+        "../../assets/foxsofa.png",
+        "../../assets/protin.png",
+        "../../assets/bluesofa.png",
       ],
     },
     {
@@ -73,16 +73,16 @@ const FlashSale = () => {
       discountPrice: 40.0,
       new: false,
       images: [
-        "/src/assets/router.png",
-        "/src/assets/protin.png",
-        "/src/assets/bluesofa.png",
+        "../../assets/router.png",
+        "../../assets/protin.png",
+        "../../assets/bluesofa.png",
       ],
     },
   ];
   return (
     <>
-      <section className="container  mx-auto md:my-16 p-3">
-        <div className="grid grid-cols-12 justify-center gap-x-4">
+      <section className="container  mx-auto md:my-16 my-8" >
+        <div className="grid grid-cols-12 justify-center gap-x-4 p-3">
           <div className="col-span-12 md:col-span-10 lg:col-span-10">
             <div>
               <div
@@ -157,7 +157,7 @@ const FlashSale = () => {
                 </svg>
               </span>
             </button>
-            <img src={bigsale} className="w-full h-full" alt="" />
+            <img src={bigsale} className="md:w-full h-full " alt="" />
           </div>
         </div>
       </section>

@@ -13,7 +13,7 @@ const Trending = () => {
       price: 3000.0,
       discountPrice: 2036.0,
       new: false,
-      image: "/src/assets/trend1.png",
+      image: "../../assets/trend1.png",
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ const Trending = () => {
       price: 40.0,
       discountPrice: 36.0,
       new: true,
-      image: "/src/assets/trend2.png",
+      image: "../../assets/trend2.png",
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ const Trending = () => {
       price: 150.0,
       discountPrice: 124.0,
       new: false,
-      image: "/src/assets/trend3.png",
+      image: "../../assets/trend3.png",
     },
     {
       id: 4,
@@ -43,7 +43,7 @@ const Trending = () => {
       price: 3000.0,
       discountPrice: 2036.0,
       new: false,
-      image: "/src/assets/trend4.png",
+      image: "../../assets/trend4.png",
     },
     {
       id: 5,
@@ -53,7 +53,7 @@ const Trending = () => {
       price: 36.0,
       discountPrice: 40.0,
       new: false,
-      image: "/src/assets/trend5.png",
+      image: "../../assets/trend5.png",
     },
     {
       id: 6,
@@ -63,7 +63,7 @@ const Trending = () => {
       price: 36.0,
       discountPrice: 40.0,
       new: false,
-      image: "/src/assets/trend6.png",
+      image: "../../assets/src/assets/trend6.png",
     },
     {
       id: 7,
@@ -73,7 +73,7 @@ const Trending = () => {
       price: 36.0,
       discountPrice: 40.0,
       new: false,
-      image: "/src/assets/trend7.png",
+      image: "../../assets/trend7.png",
     },
     {
       id: 8,
@@ -83,7 +83,7 @@ const Trending = () => {
       price: 36.0,
       discountPrice: 40.0,
       new: false,
-      image: "/src/assets/trend8.png",
+      image: "../../assets/trend8.png",
     },
     {
       id: 9,
@@ -93,7 +93,7 @@ const Trending = () => {
       price: 36.0,
       discountPrice: 40.0,
       new: false,
-      image: "/src/assets/trend9.png",
+      image: "../../assets/trend9.png",
     },
   ];
   return (
@@ -213,7 +213,7 @@ const Trending = () => {
             </div>
           </div>
         </div>
-        <div className="grid  grid-cols-1 md:grid-cols-3 divide-x-2 divide-[#F2F2F2]  justify-center ">
+        <div className="grid  grid-cols-1 md:grid-cols-3 divide-x-2 md:divide-[#F2F2F2]  justify-center ">
           <div className="px-4">
             <div className="md:hidden">
               <Title bold={"Cosmetics"} normal={"For Winter"} />

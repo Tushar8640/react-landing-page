@@ -101,7 +101,7 @@ const TrendingProductCard = ({ product }) => {
               </svg>
             </span>
           </div>
-          <span className="text-[#8B928F]">({"rating"}.00)</span>
+          <span className="text-[#8B928F]">({rating}.00)</span>
         </div>
         <h2 className="text-[16px] text-[#17201D] font-medium  tracking-wide mt-3">
           {title}
